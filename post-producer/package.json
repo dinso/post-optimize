@@ -6,6 +6,7 @@
   "dependencies": {
     "@hono/zod-validator": "^0.4.1",
     "hono": "^4.6.7",
+    "k6": "^0.0.0",
     "kafkajs": "^2.2.4",
     "zod": "^3.23.8"
   },

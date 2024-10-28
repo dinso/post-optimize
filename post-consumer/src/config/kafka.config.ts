@@ -34,7 +34,7 @@ class KafkaConfig {
         try {
             await this.consumer.run({
                 eachMessage: async ({ topic, partition, message }) => {
-                    console.log('Message recieved: ', message);
+                    console.log('Message recieved in kafka consumer');
                     callback(JSON.parse(message?.value?.toString()!))
                 }
             })

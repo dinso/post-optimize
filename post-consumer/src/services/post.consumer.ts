@@ -1,8 +1,6 @@
 import kafkaConfig from "../config/kafka.config";
 import PostModel from "../model/posts"
 
-
-
 export const postConsumer = async () => {
     const messages: any[] = [];
     let processing = false;
@@ -13,7 +11,6 @@ export const postConsumer = async () => {
         await kafkaConfig.consume(async(message) => {
             messages.push(message);
             console.log('Message Recieved in consumer!')
-
             if(messages.length > 100){
                 // TODO - save bulk insertion
                 processMessages();
